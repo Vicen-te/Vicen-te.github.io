@@ -1,0 +1,126 @@
+#portfolio{
+    background-color: var(--distintive);
+    transition: background-color 0.3s;
+    padding: 140px 0 90px;
+}
+
+.portfolio_inner{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 73px;
+}
+
+.portfolio_list{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+#portfolio .portfolio_list ul{
+    margin: 0 0 0 -50px;
+    list-style-type: none;
+}
+
+#portfolio .portfolio_list ul li{
+    margin: 0 0 50px;
+    float: left;
+    width: 33.3333%;
+    padding-left: 50px;
+}
+
+.gallery_zoom{
+    position: relative;
+    height: 600px;
+}
+
+.inner{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.entry{
+    position: relative;
+}
+
+#portfolio .portfolio_list ul li .inner img{
+    opacity: 0;
+    min-width: 100%;
+}
+
+#portfolio .portfolio_list ul li .inner .main_image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#portfolio .portfolio_list ul li .inner:hover .main_image{
+    transform: scale(1.1) translateZ(0);
+}
+
+
+.portfolio_titles{
+    white-space: nowrap;
+    background: var(--primary);
+    font-size: 18px;
+    padding: 5px 25px;
+    font-weight: 600;
+    color: var(--secondary);
+    position: fixed;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio_titles span{
+    text-align: center;
+    position: absolute;
+    background: var(--primary);
+    top: 100%;
+    left: 0;
+    margin-top: -10px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 15px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 1040px){
+    #portfolio .portfolio_list ul li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px){
+    #portfolio .portfolio_list ul {
+        margin: 0px;
+    }
+    #portfolio .portfolio_list ul li {
+        width: 100%;
+        padding-left: 0px;
+    }
+}
+

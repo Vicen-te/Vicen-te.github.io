@@ -1,0 +1,60 @@
+/*HomeLogo*/
+.logoV{
+  margin-left: auto;
+  margin-right: auto;   
+  width: 4rem;
+  height: 4rem;
+}
+
+/*Image above the navigation bar*/
+.imgAboveNav {
+   /* padding: 50px;*/
+    display: block;
+    text-align: center;
+    user-select: none; 
+
+    max-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    cursor: default;
+}
+
+/* HomeLogo animation */
+.imgAboveNav > .logoV .ripple{
+    padding: 20px;
+    z-index: -1;
+    background-color: #ffe6af;
+} 
+
+/* Color Animation */
+.ripple {
+    box-sizing: content-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f7a515; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleAnim 0.7s forwards;
+}
+
+/* Color Transition */
+@keyframes rippleAnim {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.btn {
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}

@@ -1,0 +1,153 @@
+#contact{
+    padding: 342px 0;
+}
+
+.contact_inner{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.desc{
+    padding-top: 73px;
+    display: flex;
+}
+
+#copyright{
+    background-color: var(--footer);
+    padding: 50px 0;
+
+}
+
+#copyright .inner{
+    /*animation-name: fadeInLeft;*/
+    visibility: visible;
+    animation-duration: 1.5s;
+}
+
+.left{
+    width: 65%;
+    /*animation-name: fadeInLeft;*/
+    visibility: visible;
+    animation-duration: 1.5s;
+}
+
+/*
+.wow{
+    visibility: visible;
+}
+
+.animated{
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInLeft{
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}*/
+
+.social_media{
+    width: 100%;
+    float: right;
+    display: flex;
+    justify-content: end;
+    user-select: none;
+    cursor: pointer;
+}
+
+.fab{
+    text-decoration: none;
+    color: var(--secondary);
+    float:left;
+    padding: 0 10px;
+    font-size: 100px;
+    transition: color 0.3s;
+}
+
+.fab:hover{
+    color: var(--orange3);
+}
+
+#copyright .inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.visibleInput{
+    display: none;
+}
+
+label[for="lang"]{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 300ms color;
+}
+
+label[for="lang"]:hover{
+    color: var(--dropdowntxt);
+}
+
+
+@media (max-width: 1040px){
+    .desc {
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 40px;
+    }
+    .social_media {
+        justify-content: center;
+    }
+    #contact{
+        padding: 242px 0;
+        margin: 100px 0;
+    }
+}
+
+@media (max-width: 768px){
+    .inner {
+        gap: 30px;
+    }
+    .social_media {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 5vw;
+    }
+    .social_media .fab{
+        text-align: center;
+        font-size: 110px;
+    }
+    #contact{
+        padding: 142px 0;
+        margin: 200px 0;
+    }
+}

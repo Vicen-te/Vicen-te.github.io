@@ -1,0 +1,208 @@
+.navbar {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0.8rem 9rem;
+}
+
+.navbar_container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.animate {
+    transition: background-color 0.3s;
+    background-color: var(--footer);
+    box-shadow: var(--shadow);
+}
+
+.navbar ul{
+    font-size: 16px;
+    letter-spacing: .5px;
+
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.navbar ul li{
+    margin-right: 2rem;
+}
+
+#nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav li a{
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+#nav ul li a:hover, .toggle_container:hover{
+    color: var(--dropdowntxt);
+}
+
+.active_color{
+    color: var(--dropdowntxt);
+}
+
+.toggle_container{
+    z-index: 100;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.toggle_container p{
+    margin: 0;
+}
+
+.toggle_container a{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*hamburguer lines container*/
+.hamburger {
+    height: 28px;
+    width: 35px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/*hamburguer lines style*/ 
+.hamburger .line {
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    
+    z-index: 1;
+    transform-origin: px 4px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.3s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+
+/*Change origin of hamburguer line 1 and 3*/
+.hamburger .line1, .hamburger .line3 {
+    transform-origin: 100% 0%;
+    transition: transform 0.3s ease-in-out, background 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+/*Hamburguer line transitions (rotation for lines 1 and 3)*/
+/*For every line, line 1,2,3*/
+#links-toggle:checked ~ .hamburger span{
+    transform: rotate(45deg) translate(1px, -1px);
+    opacity: 1;
+}
+
+/*For the middle line, line 2*/
+#links-toggle:checked ~ .hamburger span:nth-child(2){
+    /*We want to see only the cross that is why we make it invisible the line 2*/
+    opacity: 0;
+    /*we set the transition because we haven't done it before with the line 2*/
+    transition: transform 0.1s ease-in-out, background 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    /*In this case we scale*/
+    transform: scale(0.2, 0.2);
+}
+
+/*For the first line, line 3*/
+#links-toggle:checked ~ .hamburger span:nth-child(1){
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+@media (max-width: 1040px){
+    .navbar{
+        padding: 0.8rem 2rem;
+        background-color: var(--footer);
+        box-shadow: var(--shadow);
+    }
+
+    .navbar ul li{
+        margin: 0;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .links{
+        /*display: flex;
+        flex-direction: column;*/
+        position: absolute;
+        width: 100%;
+        right: 0%;
+        left: 0%;
+        top: 100%;
+    
+        background-color: var(--footer);
+        user-select: none;
+        
+        min-width: max-content;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s cubic-bezier(0.52, 0.16, 0.24, 1);
+    }
+
+    #links-toggle:checked ~ .links{
+        max-height: 296px;
+    }
+
+    .links li{
+        width: 100%;
+        height: 4em;
+        border-bottom: 2.5px solid var(--dropdown);
+    }
+
+    #links-toggle ~ .links li:first-child{
+        /*lines between a*/
+        border-top: 2.5px solid var(--dropdown);
+    }
+
+    .links li a{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        pointer-events: all;
+        opacity: 1;
+        z-index: 1;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+    }
+
+    #nav label:last-child{
+        margin-left: 1.5rem;
+    }
+
+    #toggle{
+        display: none;
+    }
+
+    .toggle_container{
+        top: 1.9rem;
+    }
+    
+    #dark_icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vicente Brisa Saez">
+    <meta name="description" content="Vicen's website and portfolio">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Web Site Title -->
+    <title>Vicen's Portfolio</title>
+    <!-- Web Site Icon -->
+    <link rel="icon" href="img/logo/SVG/V4.svg">
+    <link rel="apple-touch-icon" href="img/logo/SVG/V4.svg">
+
+    <!-- Load css styles -->
+    <link rel ="stylesheet" href="css/navbar.css">
+    <link rel ="stylesheet" href="css/logoAnim.css">
+    <link rel ="stylesheet" href="css/home.css">
+    <link rel ="stylesheet" href="css/about.css">
+    <link rel ="stylesheet" href="css/portfolio.css">
+    <link rel ="stylesheet" href="css/contact.css">
+    <link rel ="stylesheet" href="css/general.css">
+
+    <!-- Fontawesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Text font-->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'>
+</head>
+
+<body translate="no">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="header">
+
+        <!-- Navbar Container -->
+        <div class="navbar_container">
+
+            <!-- Logo image -->
+            <a class = "imgAboveNav homeRef">
+                <div class="logoV btn"><img src="img/logo/SVG/V2.svg" alt="Home"></div>
+            </a>
+
+            <!-- Right Navbar -->
+            <div id="nav">
+                <!--Input that takes the click you make -->
+                <input class="visibleInput" id="links-toggle" type="checkbox"/>
+
+                <!-- List of Links -->
+                <ul class="links">
+                    <li><a class="homeRef langchange" data-ref="home" data-key="Home">Home</a></li>
+                    <li><a class="aboutRef langchange" data-ref="about" data-key="AboutM">Biography</a></li>
+                    <li><a class="portfolioRef" data-ref="portfolio">Portfolio</a></li>
+                    <li><a class="contactRef langchange" data-ref="contact" data-key="ContactM">Contact</a></li>
+                </ul>
+                
+                <!-- Dark Mode -->
+                <label for="dark" class="toggle_container">
+                    <div id="dark_icons">
+                        <a class="far fa-moon"></a>
+                        <a class="far fa-sun"></a>
+                    </div>
+                    <input class="visibleInput" id="dark" type="checkbox">
+                    <p id="toggle"></p>
+                </label>
+
+                <!-- Hamburger menu -->
+                <label for="links-toggle" class="hamburger">
+                    <!-- lines -->
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="section" id="home">
+        <div class="content">
+            <div class="name_holder langchange" data-key="Hello">
+                Hello, I'm
+                <span> Vicente Brisa Saez</span>
+            </div>
+            <p class="text_typing typer langchange" data-key="A">
+                A
+            </p>
+        </div>
+        <div class="arrow_warp bounce anchor">
+            <a class="aboutRef fas fa-angles-down"></a>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <div class="container">
+            <div class="main_title langchange" data-key="About">
+                <span>Biography</span>
+                <h3>About Me</h3>
+            </div>
+            <div class="about_inner">
+                <div class="leftimg">
+                    <div>
+                        <img src="img/Programmer.svg" alt="programmer">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="about_title">
+                        <h3 class="text_typing langchange" data-key="Intro">
+                            I'm Vicente Brisa Saez and  
+                            <span class="typer"></span>
+                        </h3>
+                    </div>
+                    <div class="text langchange" data-key="AboutText">
+                        <p>
+                            Hello! My name is 
+                            <span>Vicente Brisa Saez</span>. 
+                            A videogame programmer student from Spain. 
+                            I aim to deepen my understanding in various areas of technology and development of both products and videogames.
+                        </p>
+                    </div>
+                    <div class="about_short_contact">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-gift"></i>
+                                <span>
+                                    <label class="langchange" data-key="Birthday">Birthday: </label>
+                                    20.11.2002
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>
+                                    <label class="langchange" data-key="Age" >Age: </label>
+                                    20
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>
+                                    <label class="langchange" data-key="Location">Location: </label>
+                                    <a class="href_location" 
+                                        href="https://www.google.com/maps/place/Madrid/"  
+                                        target="_blank">
+                                        Madrid
+                                    </a> 
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-laptop-code"></i>
+                                <span class="langchange" data-key="Interesets">
+                                    <label>Interesets:</label>
+                                    AI & Deep Learning
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-building-columns"></i>
+                                <span>
+                                    <label class="langchange" data-key="Studying" >Studying: </label> 
+                                    <a class="href_location" 
+                                    href="https://www.esne.es/" target="_blank">
+                                        ESNE (Camilo José Cela)
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span class="langchange" data-key="Degree">
+                                    <label>Degree: </label> Video Game Design and Development
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>
+                                    <label class="langchange" data-key="Mail">Mail: </label>
+                                    <a class="href_location" 
+                                    href="mailto:vicenesne@gmail.com">
+                                    vicenesne@gmail.com
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <span>
+                                    <label class="langchange" data-key="Phone">Phone: </label>
+                                    <a class="href_location" 
+                                        href="tel:+32 622 02 57 38">
+                                        +32 622 02 57 38
+                                    </a>
+                                </span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="button">
+                        <a href="img/Vicente-Brisa-Saez_CV.pdf" target="_blank">
+                            <span class="langchange" data-key="Download">Download CV</span>
+                        </a>
+                    </div>
+                    <label class="button" for="show" style="float: right;">
+                        <a>
+                            <span class="langchange" data-key="Show">Show CV</span>
+                        </a>
+                    </label>
+                </div>
+            </div>
+            
+            <input class="visibleInput" id="show" type="checkbox"/>
+            <div id="drop">
+                <embed class="pdf" src="img/Vicente-Brisa-Saez_CV.pdf"></embed>
+            </div>
+        </div>
+    </div>
+   
+    <div class="section" id="portfolio">
+        <div class="container">
+            <div class="main_title langchange" data-key="Portfolio">
+                <span>Portfolio</span>
+                <h3>Featured Works</h3>
+            </div>
+            <div class="portfolio_inner">
+                <div class="portfolio_titles"style="">
+                    Amongus
+                    <span>SuS</span>
+                </div>
+                <div class="portfolio_list">
+                    <ul class="gallery_zoom">
+                        <li>
+                            <div class="inner">
+                                <div class="entry langchange2" data-title="Blood Ties" data-description = "Sophomore project (Unity/C#)">
+                                    <a class="zoom" href="https://vicen-te.itch.io/blood-ties" target="_blank">
+                                        <img src="https://img.itch.zone/aW1nLzg4MjU4NDUucG5n/315x250%23c/605tWa.png" alt="Blood-Ties">
+                                        <div class="main_image" data-img-url="https://img.itch.zone/aW1nLzg4MjU4NDUucG5n/315x250%23c/605tWa.png"
+                                        style="background-image: url(https://img.itch.zone/aW1nLzg4MjU4NDUucG5n/315x250%23c/605tWa.png);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="entry langchange2" data-title="Dragon s Power" data-description = "Sophomore project (Console app/C#)">
+                                    <a class="zoom" href="https://vicen-te.itch.io/dragons-power" target="_blank">
+                                        <img src="https://img.itch.zone/aW1nLzgwMDIxMDgucG5n/315x250%23c/m5jN1m.png" alt="Dragon's-Power">
+                                        <div class="main_image" data-img-url="https://img.itch.zone/aW1nLzgwMDIxMDgucG5n/315x250%23c/m5jN1m.png"
+                                        style="background-image: url(https://img.itch.zone/aW1nLzgwMDIxMDgucG5n/315x250%23c/m5jN1m.png);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="entry langchange2" data-title="Next Station" data-description = "Game Jam Madrid Crea, 3ª Edición (Unity/C#)">
+                                    <a class="zoom" href="https://vicen-te.itch.io/next-station" target="_blank">
+                                        <img src="https://img.itch.zone/aW1nLzcyNzM0MTUucG5n/315x250%23c/HOuJa7.png" alt="Next-Station">
+                                        <div class="main_image" data-img-url="https://img.itch.zone/aW1nLzcyNzM0MTUucG5n/315x250%23c/HOuJa7.png"
+                                        style="background-image: url(https://img.itch.zone/aW1nLzcyNzM0MTUucG5n/315x250%23c/HOuJa7.png);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="entry" data-title="UnderTrash" data-description = "ESNE Game JamOn 2021 (Unity/C#)">
+                                    <a class="zoom" href="https://vicen-te.itch.io/undertrash" target="_blank">
+                                        <img src="https://img.itch.zone/aW1nLzU3ODUxODUucG5n/315x250%23c/7piFB3.png" alt="UnderTrash">
+                                        <div class="main_image" data-img-url="https://img.itch.zone/aW1nLzU3ODUxODUucG5n/315x250%23c/7piFB3.png"
+                                        style="background-image: url(https://img.itch.zone/aW1nLzU3ODUxODUucG5n/315x250%23c/7piFB3.png);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <div class="entry langchange2" data-title="Evil Seeker" data-description = "First proyect (Construct)">
+                                    <a class="zoom" href="https://vicen-te.itch.io/evil-seeker" target="_blank">
+                                        <img src="https://img.itch.zone/aW1nLzUxNTgwNjgucG5n/315x250%23c/jdFujz.png" alt="Evil-Seeker">
+                                        <div class="main_image" data-img-url="https://img.itch.zone/aW1nLzUxNTgwNjgucG5n/315x250%23c/jdFujz.png"
+                                        style="background-image: url(https://img.itch.zone/aW1nLzUxNTgwNjgucG5n/315x250%23c/jdFujz.png);"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="main_title langchange"data-key="Contact">
+                    <span>Contact</span>
+                    <h3>Get in Touch</h3>
+                </div>
+                <div class="desc">
+                    <p class=" left langchange" data-key="ContactDesc">
+                        I would be happy to further discuss my experiences with you, simply shoot me an email or message me on LinkedIn! :)
+                    </p>
+                    <div class="social_media">
+                        <a class="fab fa-linkedin" href = "https://www.linkedin.com/in/vicente-brisa-saez/" target="_blank"></a>
+                        <a class="fab fa-github" href = "https://github.com/Vicen-te" target="_blank"></a>
+                        <a class="fab fa-youtube" href = "https://www.youtube.com/channel/UCKp1SfKexJ9MF4vXcQO_4LQ" target="_blank"></a>
+                        <a class="fab fa-twitter" href = "https://twitter.com/_Vicen_te" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="copyright">
+        <div class="container">
+            <div class="inner">
+                <p class="copy langchange" data-key="Copy">
+                    © 2022 Vicente Brisa Saez | Madrid, Spain
+                </p>
+                <label for="lang" class="langchange" data-key="Lang">
+                    Español
+                </label>
+                <input class="visibleInput" type="radio" id="lang" name="lang" onclick="changeLang();" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Load javascripts -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/text_typing.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/portfolio_text.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

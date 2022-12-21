@@ -1,0 +1,148 @@
+/* General */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Define variables */
+:root{
+    --shadow: 0 0 20px rgb(0 0 0 / 25%);
+
+    /*Orange*/
+    --orange1: #ffe6af;
+    --orange2: #fac761;
+    --orange3: #f7a515;
+    
+    /*White*/
+    --white: #f2f2f2;
+    --white2: #f9f9f9;
+    --white3: #b8b8b8;
+
+    /*Gray*/
+    --gray1: #a7a7a7;
+    --gray2: #535353;
+    
+    /*Black*/
+    --black: #222;
+    --black2: #1d1d1d;
+
+    /*LightMode*/
+    --footer: var(--white3);
+    --primary:var(--white);
+    --secondary: var(--black); 
+    --homebackground: var(--gray1);
+    --distintive: var(--white2);
+    --dropdown: var(--gray2);
+    --dropdowntxt: var(--orange1);
+}
+
+/*DarkMode*/
+.darkmode:root{
+    --footer: var(--gray2);
+    --primary: var(--black);
+    --secondary:var(--white); 
+    --homebackground: var(--black2);
+    --distintive: var(--black2);
+    --dropdown: var(--white3);
+    --dropdowntxt: var(--orange2);
+}
+
+/*Montserrat Font*/
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    font-display: swap;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    background-color: var(--primary);
+    color:var(--secondary);
+    transition: color .3s, background-color .3s;
+}
+
+html, body{
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{
+    /*background: 0 0;*/
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+}
+
+a, i {
+    border: none;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+label {
+    cursor: default;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--secondary);
+    transition: color .3s;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.section{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 0 40px;
+    position: relative;
+    clear: both;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1400px){
+    .container {
+        max-width: 1070px;
+    }
+}

@@ -1,0 +1,253 @@
+#about{
+    margin-bottom: 150px;
+    padding-top: 140px;
+}
+
+#about .about_inner{
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: flex;
+    padding-top: 100px;
+}
+
+.main_title span{
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: var(--orange3);
+}
+.main_title h3{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+.leftimg{
+    width: 35%;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    /*color: var(--secundary);
+    background-color: var(--footer);*/
+}
+
+.leftimg > div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+} 
+
+.leftimg img{
+    max-width:100%;
+    max-height:100%;
+    margin: auto auto;
+    display: block;
+}
+
+.right{
+    width: 65%;
+    height: auto;
+    padding-left: 70px;
+}
+
+.about_inner{
+    margin-bottom: 30px;
+}
+
+.about_title h3{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.about_title{
+    height: 70px;
+    user-select: none;
+}
+
+.text{
+    margin-bottom: 23px;
+    float: left;
+}
+
+.text span{
+    color: var(--orange3);
+    font-style: italic;
+}
+
+.text_typing .typer{
+   color: var(--orange3);
+}
+
+.about_short_contact{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    margin-bottom: 24px;
+}
+
+.about_short_contact ul{
+    margin: 0;
+    list-style-type: none;
+}
+
+.about_short_contact ul li:nth-of-type(2n) {
+    clear: right;
+}
+
+.about_short_contact ul li{
+    margin: 0 0 10px;
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-left: 30px;
+}
+
+.about_short_contact ul li label {
+    font-weight: 600;
+    color: var(--secundary);
+    min-width: 85px;
+    display: inline-block;
+}
+
+.about_short_contact ul li a {
+    text-decoration: none;
+    color: var(--secundary);
+    position: relative;
+    display: inline-block;
+}
+
+.about_short_contact ul li i {
+    position: absolute;
+    fill: currentcolor;
+    left: 0;
+    top: 6px;
+    width: 17px;
+    height: 17px;
+    color: var(--orange3);
+    display: flex;
+    justify-content: center;
+}
+
+.about ul li label{
+    font-weight: 600;
+    color: var(--secundary);
+    min-width: 85px;
+    display: inline-block;
+}
+
+.href_location:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+    background: currentColor;
+}
+
+.href_location:hover::after{
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.aboutRef{
+    user-select: none;
+    cursor: pointer;
+}
+
+.button{
+    user-select: none;
+    cursor: pointer;
+    float: left;
+    display: flex;
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--primary);
+    background-color: var(--orange3);
+    display: inline-block;
+    padding: 12px 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 1040px){
+    .leftimg {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .leftimg img{
+        max-width: 70%; 
+    }
+    #about .about_inner {
+        flex-direction: column;
+    }
+    #about .right {
+        width: 100%;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 768px){
+    #about .about_short_contact ul li {
+        width: 100%;
+    }
+    .button{
+        justify-content: center;
+        width: 100%;
+        clear: both;
+    }
+    .button + label{
+        margin-top: 20px;
+    }
+    .leftimg{
+        width: 100%;
+    }
+    .leftimg img{
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 455px){
+    .about_title{
+        height: 125px;
+    }
+}
+
+.pdf{
+    display: inline-block;
+    min-width: 100%;
+    min-height: 700px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#drop{
+    background:#ddd;
+    width: 100%;
+    opacity:0;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    /*transition: border-radius .3s ease .15s;*/
+    transition: all .3s ease .15s;
+}
+
+#show:checked ~ #drop {
+    opacity: 1; 
+    height: 700px;  
+    border-radius: 0px 0px 7px 7px;
+}
+  
+#drop > span { 
+    display: inline-block; 
+    padding: .5em 1em 
+}
